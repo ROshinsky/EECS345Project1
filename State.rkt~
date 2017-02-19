@@ -1,0 +1,15 @@
+;State
+;gonna do the easy list because of time constraints
+;need state_lookup returns value
+;need state_assign updates value or adds if it does not exist
+;might need state_remove to remove unneeded values?
+
+;state_lookup
+;passed state & variable, returns value
+;returns null if variable not assigned
+(define state_lookup
+  (lambda (l x)
+    (cond
+      ((null? l) null)
+      ((eq? (car (car l)) x) (cdr (car l)))
+      (else (state_lookup (cdr l) x)))))

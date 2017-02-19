@@ -1,0 +1,11 @@
+(load "simpleParser.scm")
+;Function Interpret, I will write this then try to fill in any functions used in interpret
+
+(define interpret
+  (lambda (filename)
+    (evaluate (parser filename))))  ;write evaluate function that takes parse tree and outputs value
+
+;evaluate goes through parse tree and works out value
+(define evaluate
+  (lambda (tree)
+    
